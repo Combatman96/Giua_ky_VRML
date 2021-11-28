@@ -1,0 +1,347 @@
+#VRML V2.0 utf8
+
+
+
+DEF CAR Transform {
+	children [
+		 #Mai xe
+		 Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .494 .8 .8
+					ambientIntensity .322
+					transparency .078
+				}
+			}
+			geometry IndexedFaceSet {
+				colorPerVertex FALSE
+				coord Coordinate {
+					point [
+						1 0 1, 1 0 -1, -1 0 -1, -1 0 1, .7 .8 .7, .7 .8 -.7, -.7 .8 -.7,
+						-.7 .8 .7
+					]
+				}
+				coordIndex [
+					0 1 4 -1
+					1 5 4 -1
+					1 2 5 -1
+					2 6 5 -1
+					2 3 6 -1
+					3 7 6 -1
+					3 0 7 -1
+					0 4 7 -1
+					3 2 1 0 -1
+					4 5 6 7 -1
+				]
+			}
+		}
+		#Than xe
+		Transform {
+			translation	0 -0.3 0
+			children [		 				
+				Shape {
+					appearance Appearance	{
+						material Material {
+							diffuseColor .8 .0235 .0196
+							ambientIntensity .055
+							shininess .878
+							emissiveColor .00392 0 0
+						}
+					}
+					geometry Box {size 3.6 0.6 2}
+				}
+				#Tam tan gio
+				Transform	{
+					translation	-1.8 0 0
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 0.6 0.6 0.6
+								}
+							}
+							geometry Box {
+								size 0.1 0.3 1.2
+							}
+						}						
+					]
+				}	
+				#Den pha
+				Transform	{
+					translation	-1.7 0.2 0.9
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .878 .898 .255
+									emissiveColor .812 .396 .161
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.3
+							}
+						}
+						DEF	headlight SpotLight	{
+							ambientIntensity 0.798
+							beamWidth 0.38
+							direction -1 0 0
+							attenuation	-1 0 0
+							color 1 0.83 0
+							intensity 0.91
+							radius 0.3
+							cutOffAngle	0.78
+						}
+					]
+				}	
+				Transform	{
+					translation	-1.7 0.2 -0.9
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .878 .898 .255
+									emissiveColor .812 .396 .161
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.3
+							}
+						}
+						USE	headlight
+					]
+				}
+				#Den duoi
+				Transform	{
+					translation	1.7 0.2 0.9
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .878 .898 .255
+									emissiveColor .812 .396 .161
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.3
+							}
+						}
+					]
+				}	
+				Transform	{
+					translation	1.7 0.2 -0.9
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .878 .898 .255
+									emissiveColor .812 .396 .161
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.3
+							}
+						}
+					]
+				}	
+				#Den Stop
+				Transform	{
+					translation	1.7 0.1 0.83
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .365 .0275 .0196
+									emissiveColor .949 0 0
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.2
+							}
+						}
+					]
+				}	
+				Transform	{
+					translation	1.7 0.1 -0.83
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor .365 .0275 .0196
+									emissiveColor .949 0 0
+									ambientIntensity .737
+									shininess .114
+								}
+							}
+							geometry Box {
+								size 0.3 0.1 0.2
+							}
+						}
+					]
+				}
+
+			]
+		}
+		#Day xe
+		Transform {
+			translation	0 -0.8 0
+			scale 1.8 0.2 1
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor .298 .694 .8
+							specularColor .0745 .098 .353
+							ambientIntensity .071
+							shininess .761
+						}
+					}
+					geometry IndexedFaceSet {
+						colorPerVertex FALSE
+						coord Coordinate {
+							point [
+								.8 0 .8, .8 0 -.8, -.8 0 -.8, -.8 0 .8, 1 1 1, 1 1 -1, -1 1 -1,
+								-1 1 1
+							]
+						}
+						coordIndex [
+							0 1 4 -1
+							1 5 4 -1
+							1 2 5 -1
+							2 6 5 -1
+							2 3 6 -1
+							3 7 6 -1
+							3 0 7 -1
+							0 4 7 -1
+							3 2 1 0 -1
+							4 5 6 7 -1
+						]
+					}
+				}
+			]
+		}
+	#Banh xe
+	Transform {
+		translation	-0.99 -0.8 0.81
+		rotation 1 0 0 1.57
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						 diffuseColor 0 0 0
+					}
+				}
+				geometry Cylinder {
+					height 0.4
+					radius 0.3
+				}
+			}
+		]
+	 }
+
+	 Transform {
+		translation	-0.99 -0.8 -0.81
+		rotation 1 0 0 1.57
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 0 0 0
+					}
+				}
+				geometry Cylinder {
+					height 0.4
+					radius 0.3
+				}
+			}
+		]
+	 }
+	 Transform {
+		translation	0.99 -0.8 -0.81
+		rotation 1 0 0 1.57
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+							diffuseColor 0 0 0
+					}
+				}
+				geometry Cylinder {
+					height 0.4
+					radius 0.3
+				}
+			}
+		]
+	 }
+	 Transform {
+		translation	0.99 -0.8 0.81
+		rotation 1 0 0 1.57
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						  diffuseColor 0 0 0
+					}
+				}
+				geometry Cylinder {
+					height 0.4
+					radius 0.3
+				}
+			}
+		]
+	 }
+
+
+	 Sound {
+		 source	AudioClip {
+			 url "VEHCar_Cars passages (ID 0556)_BSB.wav"
+			 loop TRUE
+		 }
+		 maxFront 10
+		 minBack 10
+		 minFront 19
+		 maxBack 19
+		 intensity 1
+	 }
+
+
+	]
+}
+
+
+
+
+
+
+# Animation clock
+DEF Clock TimeSensor
+{
+	cycleInterval 8.0
+	loop TRUE
+},
+
+# Script
+DEF Mover Script {
+	url "javascript:
+			// Move a shape in a straight path
+		function set_fraction( fraction, eventTime ) {
+		value_changed[0] = - fraction * 20; // X component
+		value_changed[l] = 0.0; // Y component
+		value_changed[2] = 0.0; // Z component
+		}
+	"
+		eventIn SFFloat set_fraction
+		eventOut SFVec3f value_changed
+	}
+
+ROUTE Clock.fraction_changed TO Mover.set_fraction
+ROUTE Mover.value_changed TO CAR.set_translation

@@ -1,0 +1,94 @@
+#VRML V2.0 utf8
+
+
+PROTO than [
+] {
+  Material {
+   diffuseColor	0.3 0.2 0.2
+  }
+}
+
+
+PROTO la [
+] {
+  Material {
+   diffuseColor	0.3 0.8 0.6
+  }
+}
+
+
+
+ Group {
+	 children [
+		 Transform {
+			 translation 0 0 0
+			 children [
+				 Shape {
+				 appearance	Appearance {
+				material than {
+
+				}
+				 }
+				 geometry Cylinder {
+					 radius	0.6
+					height 10
+				 }
+			 }
+		 ]
+
+
+		 } ,
+
+		 Transform {
+			 translation 0 5 0
+			 children [
+			 Shape {
+				 appearance	Appearance {
+				material la	{
+
+				}
+				 }
+				 geometry Cone {
+					 bottomRadius 3
+					 height	5
+				 }
+			 }]
+
+		 } ,
+
+		  Transform {
+			 translation 0 2 0
+			 children [
+			 Shape {
+				 appearance	Appearance {
+					material la	{
+
+				}
+				 }
+				 geometry Cone {
+					 bottomRadius 5
+					 height	7
+				 }
+			 }]
+
+		 }
+
+		 
+
+
+
+	]
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+ 

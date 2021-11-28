@@ -1,0 +1,63 @@
+#VRML V2.0 utf8
+
+PROTO PoleColor [
+] {
+  Material {
+    diffuseColor 1 1 1
+  }
+}
+
+PROTO BlackColor [
+] {
+  Material {
+    diffuseColor 0.25 0.25 0.25
+  }
+}
+
+Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material PoleColor {}
+			}
+			geometry Box {
+				size 25 2 2
+			}
+		}
+
+		Transform {
+			translation -10 1 0
+			children [
+				DEF blackSpot Shape {
+					appearance Appearance {
+						material BlackColor {}
+					}
+					geometry Box {
+						size 1.5 1.5 1.5
+					}
+				}
+			]
+		}
+
+		Transform {
+			translation -5 1 0
+			children [
+				USE	blackSpot
+			]
+		}
+
+		Transform {
+			translation 5 1 0
+			children [
+				USE	blackSpot
+			]
+		}
+
+		Transform {
+			translation 10 1 0
+			children [
+				USE	blackSpot
+			]
+		}
+	]
+}

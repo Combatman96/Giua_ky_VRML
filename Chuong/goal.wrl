@@ -1,0 +1,55 @@
+#VRML V2.0 utf8
+
+Group {
+	children [
+
+
+Transform {
+	rotation 0 0 1 1.57
+	children [
+		Shape {
+			appearance DEF mat1 Appearance {
+				material Material {
+					specularColor .275 .267 .275
+					emissiveColor .0902 .157 .18
+					ambientIntensity .122
+					shininess .624
+				}
+			}
+			geometry Cylinder {
+				radius 0.02
+				height 0.7
+			}
+		}
+	]
+}
+
+Transform {
+	translation	0.35 -0.26 0	
+	children [
+		Shape {
+			appearance USE mat1
+			geometry Cylinder {
+				radius 0.02
+				height 0.56
+			}
+		}
+	]
+}
+
+Transform {
+	translation	-0.35 -0.26 0	
+	children [
+		Shape {
+			appearance USE mat1
+			geometry Cylinder {
+				radius 0.02
+				height 0.56
+			}
+		}
+	]
+}
+
+
+]
+}

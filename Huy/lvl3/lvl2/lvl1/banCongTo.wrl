@@ -1,0 +1,19 @@
+#VRML V2.0 utf8
+
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 1 0.6 0.8
+  }
+}
+
+Transform {
+	scale 2 1 2
+	children [
+		Inline {
+			url	"banCong.wrl"
+		}
+	]
+}

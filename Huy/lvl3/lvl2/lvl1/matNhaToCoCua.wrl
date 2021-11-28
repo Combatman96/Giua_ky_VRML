@@ -1,0 +1,43 @@
+#VRML V2.0 utf8
+
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 1 0.6 0.8
+  }
+}
+
+
+Group {
+	children [
+		Shape {
+			appearance Appearance {
+			     material WallColor {}
+		 }
+			 geometry Extrusion {
+				beginCap TRUE
+    			endCap TRUE
+    			convex TRUE
+    			creaseAngle 1
+    			crossSection [5 3, 5 -3, -5 -3, -5 3,
+	    			-3 3, -3 -0.8, -1.75 -0.8, -1.75 3, 5 3
+	    			]
+    			solid FALSE
+    			spine [ 0 -0.5 0, 0 0.5 0 ]
+			}
+		}
+
+		Transform {
+			translation	-2.35 0.55 1.1
+			rotation -1 0 0 1.57
+			scale 0.65 0.95 0.5
+			children [
+				Inline {
+					url "cuaRaVao.wrl"
+				}
+			]
+		}
+	]
+}

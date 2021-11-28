@@ -1,0 +1,46 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation 1 0 0 1.57
+	children [
+		Transform {
+			translation	10.5 0 0
+			rotation 0 0 -1 1.57
+			children [
+				Inline {
+					url "lvl1/matNhaToHep0.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	-10.5 0 0
+			rotation 0 0 1 1.57
+			children [
+				Inline {
+					url "lvl1/matNhaToHep0.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 5 0
+			rotation 0 0 0 3.14
+			children [
+				Inline {
+					url "lvl1/matNhaToTruocTangDuoi1.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 -5 0
+			rotation 0 0 0 3.14
+			children [
+				Inline {
+					url "lvl1/matNhaToTruoc0.wrl"
+				}
+			]
+		}
+	]
+}

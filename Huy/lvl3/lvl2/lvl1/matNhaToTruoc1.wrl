@@ -1,0 +1,42 @@
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 1 0.6 0.8
+  }
+}
+
+
+Group {
+	children [
+		Shape {
+			appearance Appearance {
+			     material WallColor {}
+		 }
+			 geometry Extrusion {
+				beginCap TRUE
+    			endCap TRUE
+    			convex TRUE
+    			creaseAngle 1
+    			crossSection [11 5, 11 -5, -11 -5, -11 5, 11 5,
+					11 -4,
+				    10 -4, 4 -4, 4 4, 10 4, 10 -4,
+					3 -4, -3 -4, -3 4, 3 4, 3 -4,
+					-4 -4, -10 -4, -10 4, -4 4, -4 -4,
+					11 -4,
+					]
+    			solid FALSE
+    			spine [ 0 -0.5 0, 0 0.5 0 ]
+			}
+		}
+
+		Transform {
+			children [
+				Inline {
+					url "matNhaToKinh.wrl"
+				}
+			]
+		}
+	]
+}

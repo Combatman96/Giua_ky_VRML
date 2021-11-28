@@ -1,0 +1,25 @@
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 1 0.6 0.8
+  }
+}
+
+Group {
+	children [
+	Shape {
+		 appearance	Appearance {
+			 material WallColor	{}
+
+		 }
+		  
+		 geometry Box {
+			 size 12 6 0.3		 }
+	}]
+}
+
+
+
+

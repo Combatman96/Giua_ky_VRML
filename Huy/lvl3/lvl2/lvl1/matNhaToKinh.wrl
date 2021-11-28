@@ -1,0 +1,45 @@
+#VRML V2.0 utf8
+
+PROTO GlassColor [
+] {
+  Material {
+    diffuseColor 0.5 1 1
+	transparency 0.5
+  }
+}
+
+
+Group {
+	children [
+		Shape {
+			appearance Appearance {
+			     material GlassColor {}
+		 }
+			 geometry Box {
+				size 21 0.5 9
+			}
+		}
+
+		Transform {
+			translation	-2.5 0.35 0
+			rotation 1 0 0 1.57
+			scale 0.75 0.75 0.75
+			children [
+				Inline {
+					#url "cuaSo.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	2.5 0.35 0
+			rotation 1 0 0 1.57
+			scale 0.75 0.75 0.75
+			children [
+				Inline {
+					#url "cuaSo.wrl"
+				}
+			]
+		}
+	]
+}

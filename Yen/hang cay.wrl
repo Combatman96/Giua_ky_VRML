@@ -1,0 +1,27 @@
+#VRML V2.0 utf8
+
+Group {
+    children [
+        DEF Arch Inline {
+            bboxSize   5.0 8.0 2.0
+            bboxCenter 1.0 4.0 0.0
+            url "cay.wrl"
+        },
+        Transform {
+            translation 0.0 0.0 0
+            children USE Arch
+        },
+        Transform {
+            translation 0.0 0.0 10
+            children USE Arch
+        },
+        Transform {
+            translation 0.0 0.0 20
+            children USE Arch
+        },
+        Transform {
+            translation 0.0 0.0 30
+            children USE Arch
+        }
+    ]
+}

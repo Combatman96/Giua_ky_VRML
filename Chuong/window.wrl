@@ -1,0 +1,104 @@
+#VRML V2.0 utf8
+
+
+
+DEF light PointLight {
+					ambientIntensity 0.1
+					intensity 0.4
+					color 1 0.8 0
+					radius 3
+					location -0.3 0 0
+				}
+
+Group {
+	children [
+		Transform {
+			translation	0 0.65 0
+			children [
+				DEF WidthBar Shape {
+					appearance Appearance {
+						material Material {
+						}
+					}
+					geometry Box {
+						size 0.2 0.1 1
+					}
+				}
+			]
+		}
+
+		Transform {
+			translation	0 -0.65 0
+			children [
+				USE	WidthBar
+				Transform {
+					translation -0.2 0 0
+					children [
+						DEF PLANEW Shape {
+							appearance Appearance {
+								material Material {diffuseColor 0 0 0}
+							}
+							geometry Box {size .2 0.1 1.4}
+						}
+						Transform {
+							translation	0 -0.1 0
+							scale 1 1 .6
+							children USE PLANEW
+						}
+					]
+				}
+			]
+		}
+	  
+		Transform {
+			translation	0 0 0.55
+			children [
+				DEF HeightBar Shape {
+					appearance Appearance {
+						material Material {
+						}
+					}
+					geometry Box {size 0.2 1.4 0.1}
+				}
+			]
+		}
+
+		Transform {
+			translation	0 0 -0.55
+			children [
+				USE	HeightBar
+			]
+		}
+
+		#Window Bar
+		Shape {
+			 appearance Appearance {
+						material Material {
+
+						}
+					}
+					geometry Box { 	size 0.16 0.1 1}
+		}
+		Shape {
+			  appearance Appearance {
+						material Material {}
+					}
+					geometry Box {size 0.1 1.4 0.05}
+		}
+
+		#Glass
+		Shape {
+			appearance Appearance {
+				material Material {
+							diffuseColor .239 .671 .733
+							specularColor .176 .176 .176
+							ambientIntensity 0
+							shininess .314
+							transparency .392
+						}
+			}
+			geometry Box { size 0.01 1.4 1 }
+		}
+
+	]
+}

@@ -1,0 +1,47 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation 1 0 0 1.57
+	children [
+		Transform {
+			translation	4.75 0 0
+			rotation 0 0 -1 1.57
+			children [
+				Inline {
+					url "lvl1/matNhaHepKhong.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	-4.75 0 0
+			rotation 0 0 1 1.57
+			children [
+				Inline {
+					url "lvl1/matNhaHepKhong.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 -3.24 0
+			rotation 0 0 0 3.14
+			children [
+				Inline {
+					url "lvl1/matNhaTruocKhong.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 3.24 0
+			rotation 0 0 0 3.14
+			scale 0.455 0.55 0.4
+			children [
+				Inline {
+					url "lvl1/matNhaTang2Truoc.wrl"
+				}
+			]
+		}
+	]
+}

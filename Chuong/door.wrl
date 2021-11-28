@@ -1,0 +1,118 @@
+#VRML V2.0 utf8
+
+Group {
+	children [
+
+
+Shape {
+	appearance DEF MAT Appearance {
+		material Material {diffuseColor 0.2 0.2 0.2}
+	}
+	geometry Box {size 1.8 2.8 0.1}
+}
+
+DEF h1 Group {
+	children [
+		 Transform	 {
+			translation	0.75 0 0.3
+			children [
+
+				Shape {
+					appearance USE MAT
+					geometry Box {size 0.3 2.8 0.6	}
+				}
+			]
+		}
+
+
+		Transform	 {
+			translation	-0.75 0 0.3
+			children [
+
+				Shape {
+					appearance USE MAT
+					geometry Box {size 0.3 2.8 0.6	}
+				}
+			]
+		}
+
+		Transform {
+			translation	0 1.5 0.3
+			children [
+				Shape {
+					appearance USE MAT
+					geometry Box {size 1.8 0.2 0.8}
+				}
+			]
+		}
+		Transform {
+			translation	0 -1.5 0.5
+			children [
+				Shape {
+					appearance USE MAT
+					geometry Box {size 1.8 0.2 1}
+				}
+			]
+		}
+
+
+
+
+
+		]
+		}
+
+
+
+Transform {
+	translation	-0.1 1 0.1 
+	scale 0.2 0.2 0.2
+	children [
+		USE	h1
+		
+		Shape {
+			appearance DEF MAT Appearance {
+				material Material {
+					diffuseColor .0118 .286 .82
+					ambientIntensity .345
+					shininess .055
+					transparency .247
+				}
+			}
+			geometry Box {size 1.8 2.8 0.1}
+		}
+	]
+}
+
+Transform {
+	translation	0.46 0 0.05
+	scale 0.4 0.4 0.4
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {diffuseColor 0.9 0.9 0.9}
+			}
+			geometry Box {size 0.5 0.8 0.1}
+		}
+		Transform {
+			translation	0 0 0.2
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {diffuseColor 0.9 0.9 0.9}
+					}
+					geometry Sphere	{
+						radius 0.2
+					}
+				}
+			]
+		}
+	]
+}
+
+	]
+}
+
+
+
+

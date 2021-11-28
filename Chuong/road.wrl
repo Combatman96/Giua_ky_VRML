@@ -1,0 +1,18 @@
+#VRML V2.0 utf8
+
+#The Road
+Transform {
+	children [		
+		Shape {
+			appearance Appearance {material Material {
+				#diffuseColor 0.96 0.96 0.96
+			}
+				texture	ImageTexture {
+					url	"road.jpg"
+				}
+			}
+			
+			geometry Box {size 6.8 0.16 2}
+		}
+	]
+}

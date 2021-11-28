@@ -1,0 +1,84 @@
+#VRML V2.0 utf8
+
+Group {
+    children [
+    # Ground
+      
+    
+    # Front archway row
+        Transform {
+            translation -2 0 0 
+            rotation 1.0 0.0 0.0 0
+            children [
+				Inline {
+					url "mat1.wrl"
+				}
+			]
+        },
+		 Transform {
+            translation 6 0 0 
+            rotation 1.0 0.0 0.0 0
+            children [
+				Inline {
+					url "mat1.wrl"
+				}
+			]
+        },
+		 Transform {
+            translation 2 0 3
+		    
+            rotation 1.0 0.0 0.0 1.57
+            children [
+				Inline {
+					url "thanhtren.wrl"
+				}
+			]
+        },
+		 Transform {
+            translation -4 4.9 0.5
+		    
+            rotation 0.0 0.0 1.0 1.57
+            children [
+				Inline {
+					url "tuongngang1.wrl"
+				}
+			]
+        },
+		 Transform {
+            translation 8 4.9 0.5
+		    
+            rotation 0.0 0.0 1.0 1.57
+            children [
+				Inline {
+					url "tuongngang1.wrl"
+				}
+			]
+        },
+			 Transform {
+            translation 2 10 0.5 
+		    
+        	rotation 1.0 0.0 0.0 1.57
+            children [
+				Inline {
+					url "tuongsau.wrl"
+				}
+			]
+        },
+
+			 Transform {
+            translation 2 5 4 
+		
+		    
+        	rotation 1.0 0.0 0.0 1.57
+            children [
+				Inline {
+					url "bancong.wrl"
+				}
+			]
+        },
+
+
+
+   
+    ]
+}

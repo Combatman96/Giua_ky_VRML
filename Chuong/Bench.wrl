@@ -1,0 +1,117 @@
+#VRML V2.0 utf8
+
+
+Group {
+	children [
+
+
+Group {
+	children [
+		Transform {
+			children [
+				#Wood bar for seat
+			DEF SEAT Group {
+				children [
+					DEF BAR Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 .604 .102
+							shininess .106
+						}
+					}
+					geometry Box {
+						size 4 0.2 0.4
+					}
+					}
+					Transform {
+						translation	0 0 0.5
+						children USE BAR
+					}
+					Transform {
+						translation	0 0 -0.5
+						children USE BAR
+					}
+				]
+			}
+
+				#Metal Frame
+				DEF SUPPORT Transform {
+					translation	0 -0.15 0
+					children [
+						 DEF ROD Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 1 1 1
+									specularColor .118 .122 .122
+									ambientIntensity 0
+									shininess .082
+								}
+							}
+							geometry Box {size 0.1 0.1 1.4}
+						}
+						DEF STAND Transform {
+							translation 1.8 0 0
+							children [
+								USE ROD
+								Transform{
+									translation	0 -0.5 -0.65 
+									children [
+										DEF LEG Shape {
+											appearance Appearance {
+												material Material {
+													diffuseColor 1 1 1
+													specularColor .118 .122 .122
+													ambientIntensity 0
+													shininess .082
+												}
+											}
+											geometry Box {size 0.1 1 0.1}
+										}
+									]
+								}
+								Transform {
+									translation	0 -0.5 0.65
+									children USE LEG
+								}
+							]
+						}
+						Transform {
+							translation -3.6 0 0
+							children USE STAND
+						}
+					]
+				}
+				
+			]
+		}
+	]
+}
+
+
+Transform {
+	translation	0 0.8 -0.74
+	scale 1 1 0.8
+	rotation 1 0 0 1.4
+	children [
+		USE	SEAT
+		Transform {
+			scale 1 1 1.4
+			translation	0 -0.15 0.3
+			children [
+				USE	ROD
+				Transform {
+					translation	1.8 0 0
+					children USE ROD
+				}
+				Transform {
+					translation	-1.8 0 0
+					children USE ROD
+				}
+			]
+		}
+	]
+}
+
+
+]
+}

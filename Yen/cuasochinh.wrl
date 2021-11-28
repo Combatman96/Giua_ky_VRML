@@ -1,0 +1,83 @@
+#VRML V2.0 utf8
+																			 
+										
+
+								  PROTO WallColor [
+] {
+  Material {
+   diffuseColor 1 1 1
+  }
+}
+
+PROTO GlassColor [
+] {
+  Material {
+    diffuseColor 0.5 1 1
+	transparency 0.5
+  }
+}
+
+Group {
+	children [
+		Shape {
+			appearance Appearance {
+			     material WallColor {}
+			 }
+			 geometry Extrusion {
+				beginCap TRUE
+    			endCap TRUE
+    			convex FALSE							
+    			creaseAngle 1
+    				crossSection [1 1.5, 1 -1.5, -1 -1.5, -1 1.5,
+					1 1.5,
+					 1 1.25,0.75 1.25,0.75 -1.25,-0.75 -1.25, -0.75 1.25, 0.75 1.25,1 1.25
+					
+	    			]
+    			solid FALSE
+    			spine [ 0 0 0, 0 0.1 0 ]
+			}
+		} 
+
+		Transform {
+			translation	0 0.05 0
+		children	Shape {
+			appearance Appearance {
+			     material GlassColor  {}
+			}
+			geometry Box {
+				size 1.95 0.05 2.95
+
+			}
+		}
+		}	 ,
+			Transform {
+			translation	0 0.05 0
+		children	Shape {
+			appearance Appearance {
+			     material WallColor  {}
+			}
+			geometry Box {
+				size 0.2 0.08 2.95
+
+			}
+		}
+		}	   ,
+			Transform {
+			translation	0 0.05 0
+			rotation 0 1 0 1.57
+		children	Shape {
+			appearance Appearance {
+			     material WallColor  {}
+			}
+			geometry Box {
+				size 0.2 0.08 1.95
+
+			}
+		}
+		}
+		
+		
+
+	
+	]
+}            

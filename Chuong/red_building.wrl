@@ -1,0 +1,217 @@
+#VRML V2.0 utf8
+Group {
+	children [
+
+
+#A Floor
+DEF FLOOR Group {
+
+	children [
+
+Transform  {
+	translation	-2 0 0 
+	children [
+		Shape {
+			appearance DEF PAINT Appearance {
+				material Material {
+					diffuseColor .443 .098 .0196
+					emissiveColor .00392 0 0
+					ambientIntensity .055
+					shininess .878
+				}
+			}
+			geometry Box {size 2 3 6}
+		}
+		Transform {
+			translation	-1 0 0
+			children [Inline { url	"window.wrl"}]
+		}
+		Transform {
+			rotation 0 1 0 1.57
+			translation	 0 0 3
+			children [ Inline { url "window.wrl"}]
+		}
+	]
+}
+
+
+Transform  {
+
+	children [
+		Shape {
+			appearance  Appearance {
+				material Material {
+					diffuseColor .443 .098 .0196
+					emissiveColor .00392 0 0
+					ambientIntensity .055
+					shininess .878
+				}
+			}
+			geometry Box {size 2 3 6}
+		}
+		Transform {
+			rotation 0 1 0 1.57
+			translation	 0 0 3
+			children [ Inline { url "window.wrl"}]
+		}
+		Transform {
+			translation	0 1.5 0 
+			rotation  0 1  0 1.57
+			children [Inline {url "roofdoor.wrl"}]
+		}
+	]
+}
+
+
+
+Transform  {
+	translation 2 0 0 
+	children [
+		Shape {
+			appearance  Appearance {
+				material Material {
+					diffuseColor .443 .098 .0196
+					emissiveColor .00392 0 0
+					ambientIntensity .055
+					shininess .878
+				}
+			}
+			geometry Box {size 2 3 6}
+		}
+		Transform {
+			rotation 0 1 0 3.14
+			translation	1 0 0
+			children [Inline { url	"window.wrl"}]
+		}
+		Transform {
+			rotation 0 1 0 1.57
+			translation	 0 0 3
+			children [ Inline { url "window.wrl"}]
+		}
+
+	]
+}
+
+
+
+]}
+
+#B Floor
+Transform {
+	translation	0 -3 0
+	children USE FLOOR
+}
+
+#C Floor
+Transform {
+	translation 0 -6 0
+	children [
+		Shape	{
+			appearance USE PAINT
+			geometry Box {size 6 3 6}
+		}	
+		Transform {
+			translation	-3 -1.3 3
+			children DEF FOUNDATION Shape {
+				appearance Appearance {
+					material Material {diffuseColor 0.3 0.3 0.4}
+				}
+				geometry Box {size	0.2 0.4 0.2}
+			}
+		}
+		Transform {
+			translation	 3 -1.3 3
+			children USE FOUNDATION
+		}
+		#Main door
+		Transform {
+			translation	-2 0.1 3
+			children [
+				Inline {url "door.wrl"}
+			]
+		}
+		#Gara door
+		Transform {
+			translation	 1 0 3
+			scale 2 2 1
+			children [Inline {url "garadoor.wrl"}]
+		}
+	]
+}
+
+
+
+#Something nice
+Transform {
+	translation	-3 -3 3
+	children Shape {
+		appearance DEF BLACK Appearance {
+			material Material {diffuseColor 0.3 0.3 0.4}
+		}
+		geometry Box {size	0.1 9 0.1}
+	}
+}
+Transform {
+	translation	3 -3 3
+	children Shape {
+		appearance Appearance {
+			material Material {diffuseColor 0.3 0.3 0.4}
+		}
+		geometry Box {size	0.1 9 0.1}
+	}
+}
+
+#The Ring onTOp
+
+Transform {
+	translation -3 1.65 0
+	children [
+		Shape {
+			appearance USE BLACK
+			geometry Box{size 0.3 0.3 6.4}
+		}
+	]
+}
+
+Transform {
+	translation 3 1.65 0
+	children [
+		Shape {
+			appearance USE BLACK
+			geometry Box{size 0.3 0.3 6.4}
+		}
+	]
+}
+
+Transform {
+	translation 0 1.65 3
+	children [
+		Shape {
+			appearance USE BLACK
+			geometry Box{size 6.4 0.3 0.3}
+		}
+	]
+}
+Transform {
+	translation 0 1.65 -3
+	children [
+		Shape {
+			appearance USE BLACK
+			geometry Box{size 6.4 0.3 0.3}
+		}
+	]
+}
+
+#Side ladder
+Transform {
+	translation -3.5 -3 2
+	rotation 0 1 0 -1.57
+	children [
+		Inline {
+			url	"ladder.wrl"
+		}
+	]
+}
+
+]
+}

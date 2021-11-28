@@ -1,0 +1,88 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation 0 0 0 1.57
+	children [
+		Transform {
+			translation	0 0 0
+			rotation 0 0 0 1.57
+			children [
+				Inline {
+					url "lvl2/ToTang1.wrl"
+				}
+				DEF light PointLight {
+					ambientIntensity 0.1
+					intensity 1
+					color 1 0.8 0
+					radius 10
+					location 0 -2 3
+				}
+			]
+		}
+
+		Transform {
+			translation	0 -12 -1
+			rotation 1 0 0 1.57
+			scale 2 10 2
+			children [
+				Inline {
+					url "lvl2/lvl1/matNhaToCoCua.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 -5.5 0
+			rotation 0 1 0 1.57
+			scale 1.3 1 2.3
+			children [
+				Inline {
+					url "lvl2/lvl1/matNhaToHep0.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 5.5 0
+			rotation 0 1 0 1.57
+			scale 1.3 1 2.3
+			children [
+				Inline {
+					url "lvl2/lvl1/matNhaToHep0.wrl"
+				}
+
+			]
+		}
+
+		Transform {
+			translation	0 10.5 0
+			rotation 0 0 0 1.57
+			children [
+				Inline {
+					url "lvl2/ToTang2.wrl"
+				}
+				USE	light
+			]
+		}
+
+		Transform {
+			translation	0 15 0
+			rotation 0 0 0 3.14
+			children [
+				Inline {
+					url "lvl2/lvl1/banCongTo.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-10.5 9 8
+			rotation 0 1 0 1.57
+			scale 0.75 0.75 0.75
+			children [
+				Inline {
+					url "lvl2/lvl1/bangTekely.wrl"
+				}
+			]
+		}
+	]
+}

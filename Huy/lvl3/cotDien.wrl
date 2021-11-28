@@ -1,0 +1,49 @@
+#VRML V2.0 utf8
+
+PROTO PoleColor [
+] {
+  Material {
+    diffuseColor 1 1 1
+  }
+}
+
+Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material PoleColor {}
+			}
+			geometry Cylinder {
+				radius 2
+				height 50
+			}
+		}
+		Transform {
+			translation	0 20 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"lvl2/lvl1/cotDienPart.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	0 7.5 3
+			rotation 0 0 0 1.57
+			children [
+				Inline {
+					url	"lvl2/lvl1/cotDienPart.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	0 7.5 -3
+			rotation 0 0 0 1.57
+			children [
+				Inline {
+					url	"lvl2/lvl1/cotDienPart.wrl"
+				}
+			]
+		}
+	]
+}

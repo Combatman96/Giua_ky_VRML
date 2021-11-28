@@ -1,0 +1,110 @@
+#VRML V2.0 utf8
+
+Transform {
+	children [
+	
+		Shape {
+			appearance DEF RED Appearance {
+				material Material {
+					diffuseColor .8 .0235 .0196
+					emissiveColor .00392 0 0
+					ambientIntensity .055
+					shininess .878
+				}
+			}
+			geometry Cylinder {
+				radius 0.1
+				height 0.4
+			}
+		}
+
+		Transform {
+			translation	0 -0.24 0
+			children [
+				DEF RING Shape {
+					appearance USE RED
+					geometry Cylinder {
+						radius 0.13
+						height 0.08
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 0.24 0
+			children [
+				USE	RING
+				Transform {
+					translation	0 0.04 0
+					children [
+						Shape  {
+							appearance USE RED
+							geometry Sphere	{
+								radius 0.1
+							}
+						}
+						Transform {
+							translation	0 0.1 0
+							children [
+								Shape {
+									appearance USE RED
+									geometry Box {
+										size 0.05 0.05 0.05
+									}
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+
+
+		Transform {	  
+			translation	0 0 0.1
+			rotation 1 0 0 1.57
+			children [
+				Shape {
+					appearance DEF RED2 Appearance {
+						material Material {
+							diffuseColor .643 .0235 .0196
+							emissiveColor .00392 0 0
+							ambientIntensity .055
+							shininess .878
+						}
+
+					}
+					geometry Cylinder {
+						radius .05
+						height 0.2
+					}
+				}
+				Transform {
+					translation	0 0.077 0
+					children [
+						Shape	{
+							appearance USE RED2
+							geometry Cylinder {
+								radius 0.06
+								height 0.03
+							}
+						}
+					]
+				}
+				Transform {
+					translation	0 0.1 0
+					children [
+						Shape	{
+							appearance USE RED2
+							geometry Box {
+								size 0.03 0.03 0.03
+							}
+						}
+					]
+				}
+			]
+		}
+
+
+	]
+}

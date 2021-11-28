@@ -1,0 +1,46 @@
+#VRML V2.0 utf8
+
+
+Transform {
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .443 .098 .0196
+					emissiveColor .00392 0 0
+					ambientIntensity .055
+					shininess .878
+				}
+			}
+			geometry IndexedFaceSet	{
+				coord Coordinate {
+					point [-1 0 0,				#0
+							1 0 0 , 			#1
+							1 0 2, 				#2
+							-1 0 2,				#3
+							-1 2 0,			#4
+							1 2 0]				#5
+				}
+				coordIndex [
+						0 1 2 3 0 -1
+						0 4 5 1 0 -1
+						4 5 2 3 4 -1
+						0 4 3 0 -1
+						1 5 2 1 -1
+
+				]
+				convex TRUE
+				solid FALSE
+			}
+
+		}
+		Transform {
+			translation	0 0.9 0
+			scale 0.6 0.6 0.6
+			rotation 0 1 0 3.14
+			children [Inline {
+				url	"door.wrl"
+			}]
+		}
+	]
+}

@@ -1,0 +1,53 @@
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 0.85 0.85 0.85
+  }
+}
+
+Group {
+	children [ 
+		Transform {		   
+			translation	-0.75 0 0.51
+			children [
+				Shape {
+					appearance Appearance { 
+    					material Material	{
+							diffuseColor .878 .2 .714
+							emissiveColor .929 .118 .337
+							ambientIntensity .886
+							shininess .078
+							specularColor .537 .455 .588
+						}
+					}
+					geometry Text {
+    					string [ "TEKELY" ]
+    					fontStyle FontStyle {
+							family [ "Arial", "SANS-SERIF" ]
+							style "BOLD"
+							size 4
+							justify	"MIDDLE"
+							topToBottom TRUE
+							horizontal FALSE
+    					}
+    					length [ 0 ]
+					}
+				}
+			]
+		}
+		Transform {
+			children [
+				Shape {
+					appearance Appearance {
+						material WallColor {}
+					}
+					geometry Box {
+						size 5 25 1
+					}
+				}
+			]
+		}
+	]
+}

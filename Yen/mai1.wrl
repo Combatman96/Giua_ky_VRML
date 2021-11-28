@@ -1,0 +1,27 @@
+#VRML V2.0 utf8
+
+																		  #VRML V2.0 utf8
+PROTO WallColor [
+] {
+  Material {
+   diffuseColor	1 2 1
+  }
+}
+
+Group {
+	children [
+		 Shape {
+            appearance Appearance {
+                material Material {
+                }
+				texture	ImageTexture {
+					url	"roof.jpg"
+				}
+            }
+            geometry Box {
+                size 15 0.1 7
+            }
+        },
+	]
+	
+}

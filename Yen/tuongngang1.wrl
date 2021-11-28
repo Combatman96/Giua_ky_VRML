@@ -1,0 +1,37 @@
+#VRML V2.0 utf8
+
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 1 0.6 0.8
+  }
+}
+
+
+Group {
+	children [
+		Shape {
+			appearance Appearance {
+			     material WallColor {}
+		 }
+			 geometry Extrusion {
+				beginCap TRUE
+    			endCap TRUE
+    			convex TRUE
+    			creaseAngle 1
+    			crossSection [5 3, 5 -3, -5 -3, -5 3, 5 3,
+					
+				    -4 1, -2 1, -2 -1, -4 -1, -4 1,
+
+				   
+					
+					]
+    			solid FALSE
+    			spine [ 0 -0.15 0, 0 0.15 0 ]
+			}
+		}
+
+	
+	]
+}

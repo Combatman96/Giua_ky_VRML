@@ -1,0 +1,17 @@
+#VRML V2.0 utf8
+
+PROTO WallColor [
+] {
+  Material {
+    diffuseColor 0.72 0.25 0.26
+  }
+}
+
+Shape {
+	appearance Appearance {
+		 material WallColor {}
+	}
+	geometry Box {
+		size 6 0.5 4
+	}
+}

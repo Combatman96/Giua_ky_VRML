@@ -1,0 +1,300 @@
+#VRML V2.0 utf8
+ 
+Transform {
+	translation	0.88 -1.346 0.2 
+	scale 0.12 0.12 0.12
+	children [
+		Inline {
+			url	"Khanh/nha.wrl"
+		}	
+	]
+}
+
+
+Transform {
+	translation	-0.36 -0.68 0.3
+	scale 0.05 0.05 0.05
+	children [
+		Inline {
+			url	"Huy/lvl3/nhaTo.wrl"
+		}
+	]
+}
+												
+
+
+Transform {
+	translation	-1.6 -0.1 0
+	scale 0.2 0.2 0.2
+	children [
+		Inline {
+			url	"Chuong/red_building.wrl"
+		}	
+	]
+}
+
+
+
+Transform {
+	translation	-2.96 -1.42 0.4
+	scale 0.07 0.07 0.07
+	rotation 1 0 0 -1.57  
+	children [
+		Inline {
+			url	"Yen/nha.wrl"
+		}
+	]
+}
+
+Transform {
+	translation	 2.1 -1.4 0.4
+	scale 0.1 0.1 0.1
+	children [
+		Inline {
+			url	"Huy/lvl3/nha.wrl"
+		}
+	]
+}
+
+#the Base
+Transform {
+	translation	-0.4 -1.7 0.3
+	children [		
+		DEF side Shape {
+			appearance Appearance {material Material {
+			}
+				texture	ImageTexture {
+					url	"Chuong/sidewalk2.jpg"
+					repeatS	TRUE
+					repeatT	TRUE
+				}
+			}
+			geometry Box {size 6.8 0.2 2.8}
+		}
+
+		#Tru cuu hoa
+		Transform {
+			translation	 1.13 0.23 1.1
+			scale 0.5 0.5 0.5
+			children Inline	{url "Chuong/fire_hydrade.wrl"}
+		}
+
+		#Thung Rac
+		Transform {
+			translation	 1.48 0.342 0.5
+			scale 0.12 0.12 0.12 
+			children [Inline {url "Chuong/Trash_bin.wrl"}]
+		}
+
+		#Cot dien
+		Transform {
+			translation	-3.2 0.86 1.2
+			scale  0.025 0.03 0.025
+			children [Inline {url "Huy/lvl3/cotDien.wrl"}]
+		}
+
+		#Cot dien
+		Transform {
+			translation	3.2 0.86 1.2
+			scale  0.025 0.03 0.025
+			children [Inline {url "Huy/lvl3/cotDien.wrl"}]
+		}
+		Transform {
+			translation	-3.2 0.86 -1
+			scale  0.025 0.03 0.025
+			children [Inline {url "Huy/lvl3/cotDien.wrl"}]
+		}
+
+		#Ghe cong cong
+		Transform {
+			translation	0.13 0.2 1.1
+			scale 0.1 0.1 0.1
+			rotation 0 1 0 -1.57
+			children [Inline {url "Chuong/Bench.wrl"}]
+		}
+		#Trees
+		Transform {
+			scale 0.14 0.14 0.14
+			translation	-2 0.76 1.1 
+			children [
+				Inline {
+					url	"Chuong/tree_square.wrl"
+				}
+			]
+		}
+
+		#Trees
+		Transform {
+			scale 0.14 0.14 0.14
+			translation	0.3 0.76 1.1 
+			rotation 0 1 0  1.23
+			children [
+				Inline {
+					url	"Chuong/tree_square.wrl"
+				}
+			]
+		}
+		#Trees
+		Transform {
+			scale 0.14 0.14 0.14
+			translation	2.6 0.76 1.1 
+			rotation 0 1 0 -0.923
+			children [
+				Inline {
+					url	"Chuong/tree_square.wrl"
+				}
+			]
+		}
+
+		#Street
+		Transform {
+			translation	 0 -0.028 2.4 
+			children [
+				  Inline {
+					  url "Chuong/road.wrl"
+				  }
+				  Transform	{
+					  translation 0 0.42 -0.52
+					  scale	0.3 0.3 0.3
+					  children [Inline{url "Chuong/car.wrl"}]
+				  }
+				  Transform	{
+					  translation 3 0.42 0.52
+					  scale	0.3 0.3 0.3
+					  children [Inline{url "Chuong/car2.wrl"}]
+				  }
+			]
+		}
+	]
+}
+
+
+Transform {
+	translation	-0.4 -1.7 5.1
+	children [
+		USE	side
+
+		#San bong
+		Transform {
+			translation	2.4 0.4 1
+			scale 1 0.8 1
+			rotation 0 1 0 1.57
+			children [ 
+				Inline {
+					url	"Chuong/SoccerField.wrl"
+				}
+			]
+		}
+
+		#Tree
+		Transform {
+			translation	-1.6 0.86 0.2
+			scale 0.3 0.3 0.3
+			rotation 0 1 0 -2.45
+			children [Inline {url "Chuong/tree_hex.wrl"}]
+		}
+
+		#Cot dien
+		Transform {
+			translation	-3.2 0.86 1.2
+			scale  0.025 0.03 0.025
+			children [Inline {url "Huy/lvl3/cotDien.wrl"}]
+		}
+		Transform {
+			translation	-3.2 0.86 -1
+			scale  0.025 0.03 0.025
+			children [Inline {url "Huy/lvl3/cotDien.wrl"}]
+		}
+
+
+		#Thung Rac
+		Transform {
+			translation	 2.68 0.342 -0.5
+			scale 0.12 0.12 0.12 
+			rotation 0 1 0 1.57
+			children [Inline {url "Chuong/Trash_bin.wrl"}]
+		}
+
+
+		Transform {
+			translation	-2.5 0.2 0
+			scale 0.1 0.1 0.1
+			children [Inline {url "Chuong/Bench.wrl"}]
+		}
+		Transform {
+			translation	-2.5 0.2 -0.23
+			scale 0.1 0.1 0.1
+			rotation 0 1 0 3.14
+			children [Inline {url "Chuong/Bench.wrl"}]
+		}
+
+	]
+}
+
+
+#Day dien
+#Day doc
+DEF day1 Transform {
+	translation	-3.36 -0.566 2.8
+	rotation 1 0 0 1.57
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {diffuseColor  0 0 0}
+			}
+			geometry Cylinder {
+				radius 0.006
+				height 7.2
+			}
+		}
+	]
+}
+
+Transform {
+	translation	-0.1 0 0
+	children [USE day1]
+}
+
+Transform {
+	translation	-0.37 0 0
+	children USE day1
+}
+
+Transform {
+	translation	-0.47 0 0
+	children USE day1
+}
+
+
+#Day ngang
+Transform {
+	translation	-0.36 -0.2 1.6
+	rotation  0 0 1 1.57
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {diffuseColor  0 0 0}
+			}
+			geometry Cylinder {
+				radius 0.006
+				height 6.5
+			}
+		}
+	]
+}
+
+Transform {
+	translation	-0.36 -0.2 1.38
+	rotation  0 0 1 1.57
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {diffuseColor  0 0 0}
+			}
+			geometry Cylinder {
+				radius 0.006
+				height 6.5
+			}
+		}
+	]
+}
